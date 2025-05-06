@@ -16,11 +16,7 @@ class VacacionesBase(BaseModel):
     gestion_completada: Optional[bool] = False
 
 class VacacionesCreate(VacacionesBase):
-    @validator('dias')
-    def validar_dias(cls, v, values):
-        if v != 15:
-            raise ValueError("Las vacaciones deben ser exactamente 15 días por gestión")
-        return v
+    pass
 
 class VacacionesResponse(VacacionesBase):
     id: int

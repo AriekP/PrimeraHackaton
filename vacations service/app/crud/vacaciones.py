@@ -1,7 +1,8 @@
 from sqlalchemy.orm import Session
 from datetime import date, timedelta
-from app.models import Vacaciones, Funcionario
-from app.schemas import VacacionesCreate
+from app.models.vacaciones import Vacaciones
+from app.models.funcionario import Funcionario  # Importa el modelo Funcionario
+from app.schemas.vacaciones import VacacionesCreate
 
 def calcular_vacaciones(db: Session, id_funcionario: int):
     funcionario = db.query(Funcionario).filter(Funcionario.id == id_funcionario).first()

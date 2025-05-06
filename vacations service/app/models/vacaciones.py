@@ -1,5 +1,5 @@
-from sqlalchemy import Column, Integer, Date, ForeignKey, Enum, Boolean
-from sqlalchemy.orm import relationship
+from sqlalchemy import Column, Integer, Date, Enum, ForeignKey, Boolean
+from sqlalchemy.orm import relationship  # Asegúrate de importar relationship
 from app.database import Base
 from enum import Enum as PyEnum
 
